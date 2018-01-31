@@ -1,0 +1,58 @@
+﻿DEBUG 2018-01-31 10:40:02,880 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-31 10:40:03,127 [1    ] Abp.Modules.AbpModuleManager             - Found 9 ABP modules in total.
+DEBUG 2018-01-31 10:40:03,547 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: PerRequestProblemSite.Migrator.PerRequestProblemSiteMigratorModule, PerRequestProblemSite.Migrator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:40:03,559 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: PerRequestProblemSite.EntityFrameworkCore.PerRequestProblemSiteEntityFrameworkModule, PerRequestProblemSite.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:40:03,562 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: PerRequestProblemSite.PerRequestProblemSiteCoreModule, PerRequestProblemSite.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:40:03,563 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:40:03,564 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:40:03,565 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:40:03,566 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:40:03,568 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:40:03,569 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:40:03,581 [1    ] Abp.Modules.AbpModuleManager             - 9 modules loaded.
+DEBUG 2018-01-31 10:40:04,392 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: PerRequestProblemSite.EntityFrameworkCore.PerRequestProblemSiteDbContext, PerRequestProblemSite.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:40:05,419 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-31 10:40:05,487 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-31 10:40:05,557 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-01-31 10:40:05,566 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: PerRequestProblemSite
+INFO  2018-01-31 10:40:06,259 [1    ] PerRequestProblemSite.Migrator.Log       - Host database: Server=localhost; Database=PerRequestProblemSiteDb; Trusted_Connection=True;
+INFO  2018-01-31 10:40:06,260 [1    ] PerRequestProblemSite.Migrator.Log       - Continue to migration for this host database and all tenants..? (Y/N): 
+INFO  2018-01-31 10:40:10,272 [1    ] PerRequestProblemSite.Migrator.Log       - HOST database migration started...
+INFO  2018-01-31 10:40:13,486 [1    ] PerRequestProblemSite.Migrator.Log       - An error occured during migration of host database:
+INFO  2018-01-31 10:40:13,584 [1    ] PerRequestProblemSite.Migrator.Log       - System.NullReferenceException: Object reference not set to an instance of an object.
+   at PerRequestProblemSite.EntityFrameworkCore.PerRequestProblemSiteDbContext.ApplyAbpConceptsForAddedEntity(EntityEntry entry, Nullable`1 userId, EntityChangeReport changeReport) in D:\Downloads\PerRequestProblemSite\aspnet-core\src\PerRequestProblemSite.EntityFrameworkCore\EntityFrameworkCore\PerRequestProblemSiteDbContext.cs:line 30
+   at Abp.EntityFrameworkCore.AbpDbContext.ApplyAbpConcepts(EntityEntry entry, Nullable`1 userId, EntityChangeReport changeReport) in D:\Github\aspnetboilerplate\src\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 244
+   at Abp.EntityFrameworkCore.AbpDbContext.ApplyAbpConcepts() in D:\Github\aspnetboilerplate\src\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 233
+   at Abp.EntityFrameworkCore.AbpDbContext.SaveChanges() in D:\Github\aspnetboilerplate\src\Abp.EntityFrameworkCore\EntityFrameworkCore\AbpDbContext.cs:line 199
+   at PerRequestProblemSite.EntityFrameworkCore.Seed.Host.DefaultEditionCreator.CreateEditions() in D:\Downloads\PerRequestProblemSite\aspnet-core\src\PerRequestProblemSite.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\DefaultEditionCreator.cs:line 30
+   at PerRequestProblemSite.EntityFrameworkCore.Seed.Host.DefaultEditionCreator.Create() in D:\Downloads\PerRequestProblemSite\aspnet-core\src\PerRequestProblemSite.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\DefaultEditionCreator.cs:line 20
+   at PerRequestProblemSite.EntityFrameworkCore.Seed.Host.InitialHostDbBuilder.Create() in D:\Downloads\PerRequestProblemSite\aspnet-core\src\PerRequestProblemSite.EntityFrameworkCore\EntityFrameworkCore\Seed\Host\InitialHostDbBuilder.cs:line 14
+   at PerRequestProblemSite.EntityFrameworkCore.Seed.SeedHelper.SeedHostDb(PerRequestProblemSiteDbContext context) in D:\Downloads\PerRequestProblemSite\aspnet-core\src\PerRequestProblemSite.EntityFrameworkCore\EntityFrameworkCore\Seed\SeedHelper.cs:line 25
+   at Abp.Zero.EntityFrameworkCore.AbpZeroDbMigrator`1.CreateOrMigrate(AbpTenantBase tenant, Action`1 seedAction) in D:\Github\aspnetboilerplate\src\Abp.ZeroCore.EntityFrameworkCore\Zero\EntityFrameworkCore\AbpZeroDbMigrator.cs:line 74
+   at PerRequestProblemSite.Migrator.MultiTenantMigrateExecuter.Run(Boolean skipConnVerification) in D:\Downloads\PerRequestProblemSite\aspnet-core\src\PerRequestProblemSite.Migrator\MultiTenantMigrateExecuter.cs:line 62
+INFO  2018-01-31 10:40:13,585 [1    ] PerRequestProblemSite.Migrator.Log       - Canceled migrations.
+DEBUG 2018-01-31 10:41:20,239 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-01-31 10:41:20,324 [1    ] Abp.Modules.AbpModuleManager             - Found 9 ABP modules in total.
+DEBUG 2018-01-31 10:41:20,463 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: PerRequestProblemSite.Migrator.PerRequestProblemSiteMigratorModule, PerRequestProblemSite.Migrator, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:41:20,467 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: PerRequestProblemSite.EntityFrameworkCore.PerRequestProblemSiteEntityFrameworkModule, PerRequestProblemSite.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:41:20,468 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: PerRequestProblemSite.PerRequestProblemSiteCoreModule, PerRequestProblemSite.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:41:20,468 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.ZeroCore, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:41:20,469 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:41:20,469 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:41:20,469 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFrameworkCore.AbpZeroCoreEntityFrameworkCoreModule, Abp.ZeroCore.EntityFrameworkCore, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:41:20,470 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule, Abp.EntityFrameworkCore, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:41:20,471 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.3.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:41:20,478 [1    ] Abp.Modules.AbpModuleManager             - 9 modules loaded.
+DEBUG 2018-01-31 10:41:22,333 [1    ] ameworkCore.AbpEntityFrameworkCoreModule - Registering DbContext: PerRequestProblemSite.EntityFrameworkCore.PerRequestProblemSiteDbContext, PerRequestProblemSite.EntityFrameworkCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-01-31 10:41:23,542 [1    ] Abp.Localization.LocalizationManager     - Initializing 3 localization sources.
+DEBUG 2018-01-31 10:41:23,584 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-01-31 10:41:23,602 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-01-31 10:41:23,610 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: PerRequestProblemSite
+INFO  2018-01-31 10:41:24,144 [1    ] PerRequestProblemSite.Migrator.Log       - Host database: Server=localhost; Database=PerRequestProblemSiteDb; Trusted_Connection=True;
+INFO  2018-01-31 10:41:24,144 [1    ] PerRequestProblemSite.Migrator.Log       - Continue to migration for this host database and all tenants..? (Y/N): 
+INFO  2018-01-31 10:41:29,568 [1    ] PerRequestProblemSite.Migrator.Log       - HOST database migration started...
+INFO  2018-01-31 10:41:34,348 [1    ] PerRequestProblemSite.Migrator.Log       - HOST database migration completed.
+INFO  2018-01-31 10:41:34,348 [1    ] PerRequestProblemSite.Migrator.Log       - --------------------------------------------------------
+INFO  2018-01-31 10:41:34,480 [1    ] PerRequestProblemSite.Migrator.Log       - All databases have been migrated.
+DEBUG 2018-01-31 10:41:38,264 [1    ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2018-01-31 10:41:38,267 [1    ] Abp.Modules.AbpModuleManager             - Shutting down completed.
